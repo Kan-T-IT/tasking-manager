@@ -2,10 +2,9 @@
 export const API_VERSION = process.env.REACT_APP_API_VERSION || 'v2';
 export const API_URL = process.env.REACT_APP_API_URL
   ? new URL('/api/' + API_VERSION + '/', process.env.REACT_APP_API_URL)
-  : 'http://127.0.0.1:5000/api/' + API_VERSION + '/';
+  : 'https://tasking-manager-staging-api.hotosm.org/' + API_VERSION + '/';
 export const OHSOME_STATS_BASE_URL =
   process.env.REACT_APP_OHSOME_STATS_BASE_URL || 'https://stats.now.ohsome.org/api';
-
 // APPLICATION SETTINGS
 export const DEFAULT_LOCALE = process.env.REACT_APP_DEFAULT_LOCALE || 'en';
 export const ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT || '';
@@ -51,8 +50,6 @@ export const SENTRY_FRONTEND_DSN = process.env.REACT_APP_SENTRY_FRONTEND_DSN;
 // OSM API and Editor URLs
 export const OSM_SERVER_URL =
   process.env.REACT_APP_OSM_SERVER_URL || 'https://www.openstreetmap.org';
-export const OSM_SERVER_API_URL =
-  process.env.REACT_APP_OSM_SERVER_API_URL || 'https://api.openstreetmap.org';
 export const ID_EDITOR_URL =
   process.env.REACT_APP_ID_EDITOR_URL || 'https://www.openstreetmap.org/edit?editor=id&';
 export const POTLATCH2_EDITOR_URL =
@@ -186,6 +183,3 @@ export const DROPZONE_SETTINGS = {
   // At time of writing, this workaround is only needed on Chromium based browsers.
   noClick: true,
 };
-
-// TM_DEFAULT_CHANGESET_COMMENT without '#'
-export const defaultChangesetComment = TM_DEFAULT_CHANGESET_COMMENT.replace('#', '');
